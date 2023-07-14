@@ -8,10 +8,10 @@ function readyNow(){
     $("#blue-btn").on('click', addBlueColorBlock);
     $("#green-btn").on('click', addGreenBlock);
     $('#yellow-btn').on('click', addYellowBlock);
-   // $('#blocks').on('click','.red-fill',removeRedColorBlock);
-    // $('#blocks').on('click','.blue-fill',removeBlueColorBlock);
-    // $('#blocks').on('click','.green-fill',removeGreenColorBlock);
-    // $('#blocks').on('click','.yellow-fill',removeYellowColorBlock);
+   $('#blocks').on('click','.red-fill',removeRedColorBlock);
+    $('#blocks').on('click','.blue-fill',removeBlueColorBlock);
+    $('#blocks').on('click','.green-fill',removeGreenColorBlock);
+     $('#blocks').on('click','.yellow-fill',removeYellowColorBlock);
 
 
     
@@ -45,21 +45,26 @@ function addYellowBlock(){
 }
 
 
+ function removeRedColorBlock(){
+    $(this).remove();
+    redCounter--;
+    $('#red-count').text(redCounter);
+ }
 
+function removeBlueColorBlock(){
+    $(this).remove();
+    blueCounter--;
+    $("#blue-count").text(blueCounter);
+ }
 
+function removeGreenColorBlock(){
+    $(this).remove();
+    greenCounter--;
+    $('#green-count').text(greenCounter);
+ }
 
-// function removeRedColorBlock(){
-//     $(this).remove();
-// }
-
-// function removeBlueColorBlock(){
-//     $(this).remove();
-// }
-
-// function removeGreenColorBlock(){
-//     $(this).remove();
-// }
-
-// function removeYellowColorBlock(){
-//     $(this).remove();
-// }
+function removeYellowColorBlock(){
+    $(this).remove();
+    yellowCounter--;
+    $('#yellow-count').text(yellowCounter);
+ }
